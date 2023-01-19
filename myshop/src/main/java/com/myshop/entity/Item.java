@@ -13,7 +13,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-public class Item {
+public class Item extends BaseEntity{
 	//not null이 아닐때는 필드 타입을 객체(예) int -> Integer)로 지정해야한다.
 	
 	@Id
@@ -37,8 +37,5 @@ public class Item {
 	
 	@Enumerated(EnumType.STRING)
 	private ItemSellStatus itemSellStatus; //상품 판매상태
-	
-	private LocalDateTime regTime; //등록시간
-	
-	private LocalDateTime updateTime; //수정시간 
+ 
 }

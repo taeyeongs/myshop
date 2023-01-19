@@ -23,9 +23,7 @@
 			}
 				
 			$('#loginbtn').click(function(){
-				alert("1");
 				if($("#id_save").is(":checked")) { //체크가 되어있으면 true를 리턴
-					alert("2");
 					var userInputId = $("#email").val(); // 이메일 값을 가져온다.
 					setCookie("userInputId", userInputId, 60); //60일 동안 쿠키 저장
 					setCookie("setCookieYN", "Y", 60)
