@@ -109,6 +109,7 @@
 				<div th:each="itemImgDto, status: ${itemFormDto.itemImgDtoList}">
 					<div class="mb-3">
 						<label for="formfile" class="form-label custom-file-label" th:text="${not #strings.isEmpty(itemImgDto.oriImgName)} ? ${itemImgDto.oriImgName} : '상품이미지' + ${status.index+1}"></label>
+						<input type="hidden" name="itemImgIds" th:value="${itemImgDto.id}">
 						<input class="form-control custom-file-input" type="file" id="itemImgfile" name="itemImgFile">
 					</div>
 				</div>
