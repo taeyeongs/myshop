@@ -16,17 +16,17 @@ import com.myshop.entity.Item;
 //JpaRepository<사용할 엔티티 테이블, 기본키 타입>
 public interface ItemRepository extends JpaRepository<Item, Long>, QuerydslPredicateExecutor<Item>, ItemRepositoryCustom {
 	//select * from item where item_nm = ?
-	List<Item> findByItemNm(String itemNm);
-	
-	//select * from item where item_nm = ? or item_detail = ?
-	List<Item> findByItemNmOrItemDetail(String itemNm, String itemDetail);
-
-	//select * from item where price < ? 
-	List<Item> findByPriceLessThan(Integer price);
-	
-	//select * from item where price < ?  order by price desc
-	List<Item> findByPriceLessThanOrderByPriceDesc(Integer price);
-	
+//	List<Item> findByItemNm(String itemNm);
+//	
+//	//select * from item where item_nm = ? or item_detail = ?
+//	List<Item> findByItemNmOrItemDetail(String itemNm, String itemDetail);
+//
+//	//select * from item where price < ? 
+//	List<Item> findByPriceLessThan(Integer price);
+//	
+//	//select * from item where price < ?  order by price desc
+//	List<Item> findByPriceLessThanOrderByPriceDesc(Integer price);
+//	
 	////////////////////////
 	//퀴즈
 //	List<Item> findByItemNmAndItemSellStatus(String itemNm, ItemSellStatus itemSellStatus);
